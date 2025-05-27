@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- SEO Meta Tags -->
+    <title>Play Snake Game Online | Custom Board & Difficulty | Clear Snake</title>
+    <meta name="description" content="Enjoy a modern, customizable Snake game with adjustable board sizes and difficulty levels. Built with HTML5, CSS3, and JavaScript. Play online now!" />
+    <meta name="keywords" content="snake game, javascript game, play snake online, html5 canvas game, web snake game, responsive snake game, snake game project, free snake game" />
+    <meta name="author" content="Your Name" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="setup-screen" id="setupScreen">
+            <h1>Snake Game</h1>
+            <div>
+                <label>Board Size (10-35):</label>
+                <input type="number" id="boardSize" min="10" max="35" value="20">
+            </div>
+            <div>
+                <h3>Select Difficulty:</h3><br>
+                <button class="difficulty-btn" data-speed="250">Slow</button>
+                <button class="difficulty-btn" data-speed="200">Medium</button>
+                <button class="difficulty-btn" data-speed="150">Hard</button>
+            </div>
+        </div>
+
+        <div class="game-screen" id="gameScreen">
+            <div class="controls">
+                <div>Score: <span id="score">0</span></div>
+                <div>
+                    <button id="restartBtn">↻ Restart</button>
+                    <button id="backBtn">← Menu</button>
+                </div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <div class="game-over" id="gameOver">
+            <h2>GAME OVER!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <div class="game-over-btns">
+                <button id="gameOverRestart">↻ Restart</button>
+                <button id="gameOverBack">← Main Menu</button>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>
