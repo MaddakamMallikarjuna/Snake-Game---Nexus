@@ -1,0 +1,99 @@
+ * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #gameContainer {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  canvas {
+    background: transparent;
+    border: none;
+    display: none; /* only show after start */
+  }
+  #uiContainer {
+    flex-grow: 1;
+    max-width: 500px;
+  }
+  #wordDisplay {
+    font-size: 2.5rem;
+    letter-spacing: 15px;
+    margin: 20px 0;
+    user-select: none;
+  }
+  #clue {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  #letters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 15px;
+    max-width: 100%;
+  }
+  .letter-btn {
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    user-select: none;
+  }
+  .letter-btn:hover:not(:disabled) {
+    background: #ffd700;
+    transform: scale(1.1);
+  }
+  .letter-btn:disabled {
+    background: #999;
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  #status {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    min-height: 1.5em;
+  }
+  #restartBtn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #ff4b2b;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none; /* only show after start */
+  }
+  #levelSelect {
+    margin-bottom: 20px;
+  }
+  #startBtn {
+    margin-left: 15px;
+    padding: 8px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #levelSelect label, #levelSelect select {
+    font-size: 1.1rem;
+  }
